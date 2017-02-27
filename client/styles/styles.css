@@ -24,7 +24,8 @@ header {
   align-items: center; }
 
 .title {
-  font: 38px impact, sans-serif; }
+  font: 38px impact, sans-serif;
+  text-shadow: 5px 5px 10px black; }
 
 .den {
   color: orange; }
@@ -36,6 +37,7 @@ nav li {
   display: inline-block;
   margin: 15px;
   font: 22px "lucida console", monospace;
+  text-shadow: 4px 4px 6px black;
   transition: all .1s ease-in-out; }
   nav li:hover {
     color: silver;
@@ -95,6 +97,8 @@ nav li {
   opacity: 0.8;
   border: 16px solid black;
   border-radius: 5px; }
+  .bandMems h2, .bio h2, .photoContainer h2 {
+    text-shadow: 2px 2px 5px orangered; }
 
 .photoContainer {
   display: flex;
@@ -104,7 +108,7 @@ nav li {
   padding-top: 25px;
   padding-bottom: 25px; }
 
-img {
+.bandPic {
   width: 831px;
   height: 625px; }
 
