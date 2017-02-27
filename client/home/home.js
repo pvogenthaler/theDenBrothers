@@ -1,7 +1,9 @@
 var home = angular.module('denbros.home', []);
 
 home.controller('HomeCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
-  $timeout(function () { twttr.widgets.load(); }, 500);
+  $timeout(function() {
+    twttr.widgets.load()
+  }, 500);
 }])
 
 home.directive('youtube', function($window) {
@@ -23,10 +25,11 @@ home.directive('youtube', function($window) {
             autoplay: 1,
             html5: 1,
             controls: 0,
-            loop: 1
+            loop: 1,
+            playlist: 'NtZohMRqbP0'
           },
-          height: '390',
-          width: '640',
+          height: '380',
+          width: '675',
           videoId: 'NtZohMRqbP0'
         });
       };
@@ -37,7 +40,7 @@ home.directive('youtube', function($window) {
 home.directive("twitter", function() {
   return {
     restrict: 'E',
-    template: '<a class="twitter-timeline" href="https://twitter.com/thedenbrothers">Tweets by thedenbrothers</a>',
+    template: '<a class="twitter-timeline" data-height="1000" data-theme="dark" data-link-color="#FFA500" data-chrome="noscrollbar nofooter noborders transparent" href="https://twitter.com/thedenbrothers">Tweets by thedenbrothers</a>',
     link: function(scope, element, attrs) {
 
     function run(){

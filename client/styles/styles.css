@@ -5,10 +5,19 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;
+  margin: 0; }
 
 header {
-  width: 70%;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 18%; }
+
+.titleAndNav {
+  width: 85%;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -17,27 +26,44 @@ header {
 .title {
   font: 38px impact, sans-serif; }
 
+.den {
+  color: orange; }
+
 nav ul {
   list-style-type: none; }
-
 nav li {
+  color: orange;
   display: inline-block;
-  margin: 20px;
-  font: 24px "lucida console", monospace;
+  margin: 15px;
+  font: 20px "lucida console", monospace;
   transition: all .1s ease-in-out; }
   nav li:hover {
-    color: orange;
+    color: silver;
     cursor: pointer;
-    transform: scale(1.01); }
+    transform: scale(1.03); }
+
+.view {
+  margin-top: 10%;
+  height: 90%; }
 
 /* home */
-.youtube {
+.home {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: space-around;
+  margin-bottom: 10px; }
+
+.youtube iframe {
+  opacity: 0.8;
+  border: 16px solid black;
+  border-radius: 5px; }
 
 .twitter {
-  float: right;
-  margin-right: 50px; }
+  width: 25%;
+  margin-bottom: 25px;
+  background-color: black;
+  opacity: 0.8;
+  border: 16px solid black;
+  border-radius: 5px; }
 
 /*# sourceMappingURL=styles.css.map */
