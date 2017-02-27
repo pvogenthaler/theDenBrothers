@@ -2,7 +2,6 @@
   "name": "thedenbrothers",
   "description": "Official Website of The Den Brothers",
   "author": "Paige Vogenthaler",
-  "main": "client/app.js",
   "scripts": {
     "start": "node server.js"
   },
@@ -12,6 +11,6 @@
   "dependencies": {
     "angular": "^1.6.2",
     "angular-route": "^1.6.2",
-    "x-gif": "^1.0.5"
+    "express": "~4.9.8"
   }
 }
