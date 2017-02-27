@@ -17,11 +17,10 @@ header {
   height: 18%; }
 
 .titleAndNav {
-  width: 85%;
   margin: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-around; }
 
 .title {
   font: 38px impact, sans-serif; }
@@ -35,7 +34,7 @@ nav li {
   color: orange;
   display: inline-block;
   margin: 15px;
-  font: 20px "lucida console", monospace;
+  font: 22px "lucida console", monospace;
   transition: all .1s ease-in-out; }
   nav li:hover {
     color: silver;
@@ -49,21 +48,37 @@ nav li {
 /* home */
 .home {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 10px; }
 
 .youtube iframe {
   opacity: 0.8;
   border: 16px solid black;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin-bottom: 10px; }
 
-.twitter {
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.blurb {
   width: 25%;
-  margin-bottom: 25px;
+  height: 45%;
   background-color: black;
   opacity: 0.8;
   border: 16px solid black;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin: 10px; }
+
+.twitter {
+  width: 35%;
+  background-color: black;
+  opacity: 0.8;
+  border: 16px solid black;
+  border-radius: 5px;
+  margin: 10px; }
 
 /*# sourceMappingURL=styles.css.map */

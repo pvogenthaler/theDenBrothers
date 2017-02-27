@@ -28,8 +28,8 @@ home.directive('youtube', function($window) {
             loop: 1,
             playlist: 'NtZohMRqbP0'
           },
-          height: '380',
-          width: '675',
+          height: '501',
+          width: '891',
           videoId: 'NtZohMRqbP0'
         });
       };
@@ -40,7 +40,7 @@ home.directive('youtube', function($window) {
 home.directive("twitter", function() {
   return {
     restrict: 'E',
-    template: '<a class="twitter-timeline" data-height="1000" data-theme="dark" data-link-color="#FFA500" data-chrome="noscrollbar nofooter noborders transparent" href="https://twitter.com/thedenbrothers">Tweets by thedenbrothers</a>',
+    template: '<a class="twitter-timeline" data-height="900" data-theme="dark" data-link-color="#FFA500" data-chrome="noscrollbar nofooter noborders transparent" href="https://twitter.com/thedenbrothers">Tweets by thedenbrothers</a>',
     link: function(scope, element, attrs) {
 
     function run(){
