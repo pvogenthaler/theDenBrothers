@@ -1,40 +1,29 @@
 var home = angular.module('denbros.home', []);
 
-home.controller('HomeCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
+home.controller('HomeCtrl', ['$scope', '$location', '$timeout', '$window', function ($scope, $location, $timeout, $window) {
+  $scope.videoid = 'NtZohMRqbP0';
+  $scope.go = function(view) {
+    $location.path(view);
+  };
   $timeout(function() {
     twttr.widgets.load()
-  }, 500);
-}])
+  }, 100);
+}]);
 
-home.directive('youtube', function($window) {
+home.directive('youtube', function($sce, $window) {
   return {
-    restrict: "E",
-    template: '<div></div>',
-
-    link: function(scope, element, attrs) {
-      var tag = document.createElement('script');
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      var player;
-
-      $window.onYouTubeIframeAPIReady = function() {
-        player = new YT.Player(element.children()[0], {
-          playerVars: {
-            autoplay: 1,
-            html5: 1,
-            controls: 0,
-            loop: 1,
-            playlist: 'NtZohMRqbP0'
-          },
-          height: '501',
-          width: '891',
-          videoId: 'NtZohMRqbP0'
-        });
-      };
-    },
-  }
+    restrict: 'EA',
+    scope: { videoid:'=' },
+    replace: true,
+    template: '<div style="height:501px;width:891px"><iframe width="100%" height="100%" src="{{url}}" frameborder="0" allowfullscreen></iframe></div>',
+    link: function (scope) {
+      scope.$watch('videoid', function (newVal) {
+        if (newVal) {
+          scope.url = $sce.trustAsResourceUrl("http://www.youtube.com/embed/" + newVal + "?autoplay=1&controls=0&loop=1&playlist=" + newVal);
+        }
+      });
+    }
+  };
 });
 
 home.directive("twitter", function() {
@@ -50,23 +39,3 @@ home.directive("twitter", function() {
     }
  };
 });
-
-
-
-
-
-// app.directive('myYoutube', function($sce) {
-//   return {
-//     restrict: 'EA',
-//     scope: { video:'=' },
-//     replace: true,
-//     template: '<div style="height:400px;"><iframe style="overflow:hidden;height:100%;width:100%" width="100%" height="100%" src="{{url}}" frameborder="1" allowfullscreen></iframe></div>',
-//     link: function (scope) {
-//       scope.$watch('video', function (newVal) {
-//         if (newVal) {
-//           scope.url = $sce.trustAsResourceUrl("http://www.youtube.com/embed/" + newVal);
-//         }
-//       });
-//     }
-//   };
-// });

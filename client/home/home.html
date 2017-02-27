@@ -1,8 +1,23 @@
 <div ng-controller="HomeCtrl" class="home">
-  <youtube class="youtube"></youtube>
+  <header>
+    <section class="titleAndNav">
+      <h2 class="title">THE <span class="den">DEN</span> BROTHERS</h2>
+      <nav>
+        <ul>
+          <li><a ng-click="go('/home')">home</a></li>
+          <li><a ng-click="go('/about')">about us</a></li>
+          <li><a ng-click="go('/contact')">contact</a></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <youtube class="youtube" videoid="videoid"></youtube>
   <div class="container">
     <section class="blurb">
-      <p>some words here</p>
+      <p>
+        Born out of curiosity in a Daly City garage, the Den Brothers have created their own brand of rock that fuses classic rock vibes with alt/rock influence.
+      </p>
     </section>
     <twitter class="twitter"></twitter>
   </div>

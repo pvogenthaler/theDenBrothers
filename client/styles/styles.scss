@@ -25,6 +25,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 
 .title {
@@ -68,12 +69,10 @@ nav {
 }
 
 .youtube {
-  iframe {
-    opacity: 0.8;
-    border: 16px solid black;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
+  border: 16px solid black;
+  border-radius: 5px;
+  opacity: 0.8;
+  margin-bottom: 10px;
 }
 
 .container {
@@ -85,7 +84,8 @@ nav {
 
 .blurb {
   width: 280px;
-  height: 45%;
+  height: 245px;
+  font: 22px "lucida console", monospace;
   background-color: black;
   opacity: 0.8;
   border: 16px solid black;
@@ -100,4 +100,33 @@ nav {
   border: 16px solid black;
   border-radius: 5px;
   margin: 10px;
+}
+
+/* about */
+
+.bandMems, .bio, .photoContainer {
+  width: 841px;
+  height: auto;
+  margin: 25px auto 25px auto;
+  padding: 0 25px 0 25px;
+  font: 22px "lucida console", monospace;
+  line-height: 30px;
+  background-color: black;
+  opacity: 0.8;
+  border: 16px solid black;
+  border-radius: 5px;
+}
+
+.photoContainer {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+img {
+  width: 831px;
+  height: 625px;
 }

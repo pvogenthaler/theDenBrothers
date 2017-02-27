@@ -2,6 +2,7 @@ var app = angular.module('denbros', [
   'ngRoute',
   'ngResource',
   'denbros.home',
+  'denbros.about',
   'denbros.services',
 ]);
 
@@ -11,8 +12,10 @@ app.config(function($routeProvider) {
       redirectTo: '/home'
     })
     .when('/home', {
-      templateUrl: 'home/home.html',
-      controller: 'HomeCtrl'
+      templateUrl: 'home/home.html'
+    })
+    .when('/about', {
+      templateUrl: 'about/about.html'
     })
     .otherwise({
       redirectTo: '/home'
